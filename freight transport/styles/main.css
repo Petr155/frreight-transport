@@ -1,0 +1,159 @@
+body{
+    background-image: url(../img/фон.jpg);
+    background-size: cover;
+}
+nav a,
+footer a,
+span {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(18, 18, 18);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a:hover {
+    color: rgb(200, 200, 200);
+    transition-duration: 0.7s;
+}
+footer a {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: rgb(153, 151, 149);
+}
+footer h3{
+    color: black;
+}
+footer a:hover {
+    background-color: rgb(74, 73, 73);
+    transition-duration: 0.7s;
+}
+article p {
+    font-size: 18px;
+}
+table {
+    background-color: whitesmoke;
+}
+h1,
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    font-size: 38px;
+}
+h2 {
+    font-size: 33px;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(18, 18, 18);
+}
+hr {
+    height: 2px;
+    background-color: black;
+}
+nav {
+    border: 2px black solid;
+    padding: 10px;
+    background-color: rgb(26, 15, 246);
+}
+/*Ссылка на внешний ресурс*/
+a[href^="https://"] {
+    color: blue;
+}
+/*двух колоночный макет*/
+#container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    /*  полупрозрачный контейнер */
+    background: rgba(255, 255, 255, 0.5);
+}
+header {
+    padding: 5px;
+    /*диагональный градиент*/
+    background: linear-gradient(45deg, rgba(245, 222, 179, 0.7), rgba(253, 214, 143, 0.7));
+}
+main {
+    margin-left: 0px;
+    padding: 10px;
+    background: #fff;
+}
+footer {
+    background: linear-gradient(45deg, rgba(245, 222, 179, 0.7), rgba(253, 214, 143, 0.7));
+    color: #fff;
+    padding: 5px;
+    clear: left;
+}
+/*подсветка элементов форм*/
+input:focus,
+textarea:focus {
+    border: 2px solid rgb(255, 30, 0);
+    background-color: lightblue;
+}
+/*оформление таблицы */
+table,
+table tr th,
+table tr td{
+    border: 1px solid black;
+}
+table{
+    max-width: 980px;
+    width: 100%;
+}
+/*блок меню flexbox*/
+#navFlexbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navFlexbox a {
+    padding: 5px;
+}
+#navFlexbox a:hover {
+    transform: translateY(-3px);
+    transition-duration: 0.7s;
+}
+/* При прокручивании страницы кнопка должна оставаться в нижней части экрана*/
+a[href^="#up"] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /*полупрозрачный фон*/
+    opacity: 0.5;
+}
+a[href^="#up"]:hover {
+    opacity: 1;
+}
+/*медиа запросы*/
+@media screen and (max-width:1000px) {
+    #container {
+        max-width: 1000px;
+        width: 100%;
+    }
+    main {
+        max-width: 1000px;
+        margin-left: 0;
+    }
+    #navFlexbox {
+        flex-wrap: wrap;
+    }
+    #navFlexbox a {
+        margin: 10px;
+    }
+    #navFlexbox a {
+        border: 1px black solid;
+        background-color: rgb(78, 190, 239);
+    }
+    #navFlexbox ul li ul li a {
+        font-size: 18px;
+        flex-wrap: nowrap;
+        margin: 5px;
+        border: none;
+        background: none;
+    }
+}
+@media screen and (max-width:640px) {
+    #navFlexbox {
+        flex-direction: column;
+    }
+}
